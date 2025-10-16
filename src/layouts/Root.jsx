@@ -5,7 +5,7 @@ import { setUser, clearUser, setInitialized } from "@/store/userSlice";
 import { getRouteConfig, verifyRouteAccess } from "@/router/route.utils";
 import { getApperClient } from "@/services/apperClient";
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
