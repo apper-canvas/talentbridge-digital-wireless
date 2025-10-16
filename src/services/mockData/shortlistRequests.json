@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "employerId": "1",
+    "jobId": "1",
+    "criteria": "Looking for senior-level software engineers with strong React and Node.js experience. Must have experience with microservices architecture and cloud platforms (AWS preferred). Looking for candidates who can mentor junior developers and contribute to architectural decisions.",
+    "numberOfCandidates": 5,
+    "urgency": "medium",
+    "additionalNotes": "Prefer candidates with startup experience and ability to work in fast-paced environment.",
+    "status": "pending",
+    "requestDate": "2024-01-17T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "employerId": "2",
+    "jobId": "2",
+    "criteria": "Need marketing professionals with 3-5 years experience in digital marketing. Must have hands-on experience with Google Ads, Facebook Ads, and marketing analytics platforms. Looking for someone who can manage campaigns end-to-end.",
+    "numberOfCandidates": 3,
+    "urgency": "high",
+    "additionalNotes": "We need someone who can start immediately and has experience in B2B marketing.",
+    "status": "in-progress",
+    "requestDate": "2024-01-16T11:30:00Z"
+  },
+  {
+    "Id": 3,
+    "employerId": "3",
+    "jobId": "4",
+    "criteria": "Seeking mid-level UX designers with strong portfolio showcasing user-centered design. Must have experience with Figma, user research methods, and design systems. Looking for candidates who can work collaboratively with development teams.",
+    "numberOfCandidates": 4,
+    "urgency": "low",
+    "additionalNotes": "Prefer candidates with experience in B2B product design and familiarity with agile methodologies.",
+    "status": "pending",
+    "requestDate": "2024-01-15T14:20:00Z"
+  },
+  {
+    "Id": 4,
+    "employerId": "1",
+    "jobId": "9",
+    "criteria": "Looking for DevOps engineers with 3-5 years experience. Must have strong AWS knowledge, Docker/Kubernetes experience, and CI/CD pipeline management. Need someone who can work remotely and collaborate across time zones.",
+    "numberOfCandidates": 6,
+    "urgency": "medium",
+    "additionalNotes": "This is a fully remote position, so strong communication skills are essential.",
+    "status": "completed",
+    "requestDate": "2024-01-14T10:45:00Z"
+  },
+  {
+    "Id": 5,
+    "employerId": "4",
+    "jobId": "6",
+    "criteria": "Need experienced product managers for B2B software products. Must have 5+ years PM experience, strong analytical skills, and experience with agile methodologies. Looking for someone who can own product roadmap and work with engineering teams.",
+    "numberOfCandidates": 3,
+    "urgency": "high",
+    "additionalNotes": "Prefer candidates with experience in enterprise software and SaaS products.",
+    "status": "in-progress",
+    "requestDate": "2024-01-13T16:00:00Z"
+  }
+]

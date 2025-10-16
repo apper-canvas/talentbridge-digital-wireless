@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "jobId": "1",
+    "candidateName": "John Smith",
+    "email": "john.smith@email.com",
+    "phone": "+1 (555) 123-4567",
+    "resumeUrl": "uploads/resumes/john_smith_resume.pdf",
+    "coverLetter": "I am excited to apply for the Senior Software Engineer position at TechCorp Inc. With over 6 years of experience in full-stack development and a strong background in React and Node.js, I believe I would be a valuable addition to your engineering team. I am particularly drawn to your company's commitment to innovation and user-centric design.",
+    "status": "under-review",
+    "submittedDate": "2024-01-16T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "jobId": "2",
+    "candidateName": "Sarah Johnson",
+    "email": "sarah.johnson@email.com",
+    "phone": "+1 (555) 987-6543",
+    "resumeUrl": "uploads/resumes/sarah_johnson_resume.pdf",
+    "coverLetter": "I am writing to express my strong interest in the Marketing Manager position at GrowthCo. My 4 years of experience in digital marketing, combined with my proven track record of managing successful campaigns, make me an ideal candidate for this role. I am excited about the opportunity to contribute to your team's continued success.",
+    "status": "shortlisted",
+    "submittedDate": "2024-01-15T14:15:00Z"
+  },
+  {
+    "Id": 3,
+    "jobId": "1",
+    "candidateName": "Michael Chen",
+    "email": "michael.chen@email.com",
+    "phone": "+1 (555) 456-7890",
+    "resumeUrl": "uploads/resumes/michael_chen_resume.pdf",
+    "coverLetter": "As a passionate software engineer with 7 years of experience building scalable web applications, I am thrilled to apply for the Senior Software Engineer role at TechCorp Inc. My expertise in microservices architecture and cloud platforms aligns perfectly with your technical requirements.",
+    "status": "submitted",
+    "submittedDate": "2024-01-14T16:45:00Z"
+  },
+  {
+    "Id": 4,
+    "jobId": "3",
+    "candidateName": "Emily Rodriguez",
+    "email": "emily.rodriguez@email.com",
+    "phone": "+1 (555) 234-5678",
+    "resumeUrl": "uploads/resumes/emily_rodriguez_resume.pdf",
+    "coverLetter": "I am excited to apply for the Data Analyst position at DataFlow Solutions. As a recent graduate with a degree in Statistics and hands-on experience with SQL, Python, and Tableau, I am eager to begin my career in data analytics with your innovative team.",
+    "status": "under-review",
+    "submittedDate": "2024-01-13T11:20:00Z"
+  },
+  {
+    "Id": 5,
+    "jobId": "4",
+    "candidateName": "David Park",
+    "email": "david.park@email.com",
+    "phone": "+1 (555) 345-6789",
+    "resumeUrl": "uploads/resumes/david_park_resume.pdf",
+    "coverLetter": "I am passionate about creating exceptional user experiences and would love to join DesignStudio Pro as a UX Designer. My 3 years of experience in UX design, combined with my strong portfolio of user-centered design solutions, demonstrate my ability to contribute meaningfully to your creative team.",
+    "status": "shortlisted",
+    "submittedDate": "2024-01-12T13:30:00Z"
+  },
+  {
+    "Id": 6,
+    "jobId": "5",
+    "candidateName": "Lisa Thompson",
+    "email": "lisa.thompson@email.com",
+    "phone": "+1 (555) 567-8901",
+    "resumeUrl": "uploads/resumes/lisa_thompson_resume.pdf",
+    "coverLetter": "I am enthusiastic about starting my sales career with SalesForce Solutions. While I am early in my career, I have strong communication skills, a competitive drive, and a genuine interest in building relationships with clients. I am eager to learn and grow within your dynamic sales organization.",
+    "status": "submitted",
+    "submittedDate": "2024-01-11T15:45:00Z"
+  },
+  {
+    "Id": 7,
+    "jobId": "6",
+    "candidateName": "Robert Wilson",
+    "email": "robert.wilson@email.com",
+    "phone": "+1 (555) 678-9012",
+    "resumeUrl": "uploads/resumes/robert_wilson_resume.pdf",
+    "coverLetter": "With 8 years of product management experience in B2B software, I am excited to apply for the Product Manager position at InnovateTech. I have successfully launched multiple products and have experience working with enterprise clients, which aligns well with your requirements.",
+    "status": "under-review",
+    "submittedDate": "2024-01-10T12:00:00Z"
+  },
+  {
+    "Id": 8,
+    "jobId": "7",
+    "candidateName": "Jessica Martinez",
+    "email": "jessica.martinez@email.com",
+    "phone": "+1 (555) 789-0123",
+    "resumeUrl": "uploads/resumes/jessica_martinez_resume.pdf",
+    "coverLetter": "I am interested in joining PeopleFirst Corp as an HR Specialist. My 3 years of HR experience, including recruitment, employee relations, and policy implementation, have prepared me well for this role. I am passionate about creating positive workplace cultures and supporting employee development.",
+    "status": "submitted",
+    "submittedDate": "2024-01-09T14:30:00Z"
+  },
+  {
+    "Id": 9,
+    "jobId": "8",
+    "candidateName": "Kevin Chang",
+    "email": "kevin.chang@email.com",
+    "phone": "+1 (555) 890-1234",
+    "resumeUrl": "uploads/resumes/kevin_chang_resume.pdf",
+    "coverLetter": "As a recent Finance graduate with strong analytical skills and experience with financial modeling, I am excited to apply for the Financial Analyst position at FinanceMax Inc. I am eager to begin my career in corporate finance and contribute to your team's success.",
+    "status": "shortlisted",
+    "submittedDate": "2024-01-08T16:15:00Z"
+  },
+  {
+    "Id": 10,
+    "jobId": "9",
+    "candidateName": "Amanda Taylor",
+    "email": "amanda.taylor@email.com",
+    "phone": "+1 (555) 901-2345",
+    "resumeUrl": "uploads/resumes/amanda_taylor_resume.pdf",
+    "coverLetter": "I am excited to apply for the DevOps Engineer position at CloudTech Systems. With 4 years of experience in cloud infrastructure, containerization, and CI/CD pipelines, I am confident I can contribute to your platform team and help maintain your scalable infrastructure.",
+    "status": "under-review",
+    "submittedDate": "2024-01-07T17:45:00Z"
+  }
+]

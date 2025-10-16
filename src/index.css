@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'react-toastify/dist/ReactToastify.css';
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.Toastify__toast-container {
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  font-size: 14px;
+  min-height: auto;
+  padding: 12px 16px;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+.Toastify__toast--success .Toastify__progress-bar {
+  background: #10B981;
+}
+
+.Toastify__toast--error .Toastify__progress-bar {
+  background: #EF4444;
+}
+
+.Toastify__toast--info .Toastify__progress-bar {
+  background: #3B82F6;
+}
