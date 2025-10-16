@@ -1,21 +1,35 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Button from "@/components/atoms/Button";
+import { useSelector } from "react-redux";
+import { useAuth } from "@/layouts/Root";
 import ApperIcon from "@/components/ApperIcon";
-import { cn } from "@/utils/cn";
+import Jobs from "@/components/pages/Jobs";
+import Button from "@/components/atoms/Button";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navigationItems = [
+const navigationItems = [
     { name: "Home", href: "/" },
     { name: "Browse Jobs", href: "/jobs" },
     { name: "For Employers", href: "/employers" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
   ];
+
+  const { logout } = useAuth();
+  const { isAuthenticated } = useSelector((state) => state.user);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
 
   const isActive = (href) => location.pathname === href;
 
@@ -63,13 +77,18 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+<div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" onClick={() => navigate("/jobs")}>
               Find Jobs
             </Button>
             <Button variant="primary" onClick={handlePostJob}>
               Post Job
             </Button>
+            {isAuthenticated && (
+              <Button variant="ghost" onClick={handleLogout}>
+                Logout
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -100,7 +119,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="px-3 py-2 space-y-2">
+<div className="px-3 py-2 space-y-2">
               <Button 
                 variant="outline" 
                 className="w-full" 
@@ -121,6 +140,18 @@ const Header = () => {
               >
                 Post Job
               </Button>
+              {isAuthenticated && (
+                <Button 
+                  variant="ghost" 
+                  className="w-full"
+                  onClick={() => {
+                    handleLogout();
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  Logout
+                </Button>
+              )}
             </div>
           </div>
         </div>

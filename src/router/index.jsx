@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
+import Root from "@/layouts/Root";
+import { getRouteConfig } from "@/router/route.utils";
 import Layout from "@/components/organisms/Layout";
-
 // Lazy load all page components
 const Home = lazy(() => import("@/components/pages/Home"));
 const Jobs = lazy(() => import("@/components/pages/Jobs"));
@@ -12,90 +13,127 @@ const EmployerDashboard = lazy(() => import("@/components/pages/EmployerDashboar
 const About = lazy(() => import("@/components/pages/About"));
 const Contact = lazy(() => import("@/components/pages/Contact"));
 const NotFound = lazy(() => import("@/components/pages/NotFound"));
+const Login = lazy(() => import("@/components/pages/Login"));
+const Signup = lazy(() => import("@/components/pages/Signup"));
+const Callback = lazy(() => import("@/components/pages/Callback"));
+const ErrorPage = lazy(() => import("@/components/pages/ErrorPage"));
+const ResetPassword = lazy(() => import("@/components/pages/ResetPassword"));
+const PromptPassword = lazy(() => import("@/components/pages/PromptPassword"));
+
+const createRoute = ({
+  path,
+  index,
+  element,
+  access,
+  children,
+  ...meta
+}) => {
+  let configPath;
+  if (index) {
+    configPath = "/";
+  } else {
+    configPath = path.startsWith('/') ? path : `/${path}`;
+  }
+
+  const config = getRouteConfig(configPath);
+  const finalAccess = access || config?.allow;
+
+  const route = {
+    ...(index ? { index: true } : { path }),
+    element: element ? <Suspense fallback={<div>Loading.....</div>}>{element}</Suspense> : element,
+    handle: {
+      access: finalAccess,
+      ...meta,
+    },
+  };
+
+  if (children && children.length > 0) {
+    route.children = children;
+  }
+
+  return route;
+};
 
 // Define main routes with lazy loading and Suspense
 const mainRoutes = [
-  {
+  createRoute({
     path: "",
     index: true,
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <Home />
-      </Suspense>
-    )
-  },
-  {
+    element: <Home />
+  }),
+  createRoute({
     path: "jobs",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <Jobs />
-      </Suspense>
-    )
-  },
-  {
+    element: <Jobs />
+  }),
+  createRoute({
     path: "job/:id",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <JobDetail />
-      </Suspense>
-    )
-  },
-  {
+    element: <JobDetail />
+  }),
+  createRoute({
     path: "employers",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <Employers />
-      </Suspense>
-    )
-  },
-  {
+    element: <Employers />
+  }),
+  createRoute({
     path: "employers/post-job",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <PostJob />
-      </Suspense>
-    )
-  },
-  {
+    element: <PostJob />
+  }),
+  createRoute({
     path: "employers/dashboard",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <EmployerDashboard />
-      </Suspense>
-    )
-  },
-  {
+    element: <EmployerDashboard />
+  }),
+  createRoute({
     path: "about",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <About />
-      </Suspense>
-    )
-  },
-  {
+    element: <About />
+  }),
+  createRoute({
     path: "contact",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <Contact />
-      </Suspense>
-    )
-  },
-  {
+    element: <Contact />
+  }),
+  createRoute({
     path: "*",
-    element: (
-      <Suspense fallback={<div>Loading.....</div>}>
-        <NotFound />
-      </Suspense>
-    )
-  }
+    element: <NotFound />
+  })
 ];
 
-// Create routes array with Layout as parent
+const authRoutes = [
+  createRoute({
+    path: "login",
+    element: <Login />
+  }),
+  createRoute({
+    path: "signup",
+    element: <Signup />
+  }),
+  createRoute({
+    path: "callback",
+    element: <Callback />
+  }),
+  createRoute({
+    path: "error",
+    element: <ErrorPage />
+  }),
+  createRoute({
+    path: "reset-password/:appId/:fields",
+    element: <ResetPassword />
+  }),
+  createRoute({
+130]    path: "prompt-password/:appId/:emailAddress/:provider",
+131]    element: <PromptPassword />
+132]  })
+133] ];
+
 const routes = [
   {
     path: "/",
-    element: <Layout />,
-    children: [...mainRoutes]
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [...mainRoutes]
+      },
+      ...authRoutes
+    ]
   }
 ];
 

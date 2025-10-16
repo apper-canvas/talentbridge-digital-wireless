@@ -1,0 +1,172 @@
+{
+  "/": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Homepage is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/jobs": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Jobs page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/job/:id": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Job detail is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/employers": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Employers page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/employers/post-job": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Post job requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/employers/dashboard": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Dashboard requires authentication",
+            "rule": "authenticated"
+          }
+        ]
+      },
+      "redirectOnDeny": "/login"
+    }
+  },
+  "/about": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "About page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/contact": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Contact page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/login": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Login page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/signup": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Signup page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/callback": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Callback is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/error": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Error page is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/reset-password/:appId/:fields": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Reset password is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  },
+  "/prompt-password/:appId/:emailAddress/:provider": {
+    "allow": {
+      "when": {
+        "conditions": [
+          {
+            "label": "Prompt password is public",
+            "rule": "public"
+          }
+        ]
+      }
+    }
+  }
+}
