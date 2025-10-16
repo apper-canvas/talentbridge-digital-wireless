@@ -116,11 +116,11 @@ const authRoutes = [
     path: "reset-password/:appId/:fields",
     element: <ResetPassword />
   }),
-  createRoute({
-130]    path: "prompt-password/:appId/:emailAddress/:provider",
-131]    element: <PromptPassword />
-132]  })
-133] ];
+createRoute({
+    path: "prompt-password/:appId/:emailAddress/:provider",
+    element: <PromptPassword />
+  })
+];
 
 const routes = [
   {

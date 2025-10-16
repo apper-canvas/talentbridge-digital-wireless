@@ -331,5 +331,3 @@ class ShortlistService {
 }
 
 export const shortlistService = new ShortlistService();
-
-export const shortlistService = new ShortlistService();
