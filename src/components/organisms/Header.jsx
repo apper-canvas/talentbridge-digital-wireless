@@ -5,7 +5,7 @@ import { useAuth } from "@/layouts/Root";
 import ApperIcon from "@/components/ApperIcon";
 import Jobs from "@/components/pages/Jobs";
 import Button from "@/components/atoms/Button";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
